@@ -361,11 +361,11 @@ do -- Default Commands
 
         local OldLevel = settings().Rendering.QualityLevel
 
-        RunService:Set3dRenderingEnabled(true)
+        RunService:Set3dRenderingEnabled(false)
         settings().Rendering.QualityLevel = 1
 
         InputService.WindowFocused:Connect(function()
-            RunService:Set3dRenderingEnabled(true)
+            RunService:Set3dRenderingEnabled(false)
             settings().Rendering.QualityLevel = OldLevel
             setfpscap(6)
         end)
@@ -373,7 +373,7 @@ do -- Default Commands
         InputService.WindowFocusReleased:Connect(function()
             OldLevel = settings().Rendering.QualityLevel
 
-            RunService:Set3dRenderingEnabled(false)
+            RunService:Set3dRenderingEnabled(true)
             settings().Rendering.QualityLevel = 1
             setfpscap(_TARGETFPS)
         end)
