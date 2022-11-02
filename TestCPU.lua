@@ -365,7 +365,7 @@ do -- Default Commands
         settings().Rendering.QualityLevel = 1
 
         InputService.WindowFocused:Connect(function()
-            RunService:Set3dRenderingEnabled(false)
+            RunService:Set3dRenderingEnabled(true)
             settings().Rendering.QualityLevel = OldLevel
             setfpscap(6)
         end)
