@@ -361,7 +361,7 @@ do -- Default Commands
 
         local OldLevel = settings().Rendering.QualityLevel
 
-        RunService:Set3dRenderingEnabled(true)
+        RunService:Set3dRenderingEnabled(false)
         settings().Rendering.QualityLevel = 1
 
         InputService.WindowFocused:Connect(function()
